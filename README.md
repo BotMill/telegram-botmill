@@ -1,2 +1,2 @@
-# telegram-botmill
-A Java framework for building bots on Facebook's Messenger Platform.
+# Telegram-BotMill
+A Java framework for building bots on Telegram.
