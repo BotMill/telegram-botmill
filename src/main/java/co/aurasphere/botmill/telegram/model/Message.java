@@ -7,6 +7,8 @@ import java.io.Serializable;
 import java.util.Calendar;
 import java.util.List;
 
+import co.aurasphere.botmill.telegram.model.game.Game;
+
 import com.google.gson.annotations.SerializedName;
 
 /**
@@ -731,9 +733,9 @@ public class Message implements Serializable {
 	}
 
 	/**
-	 * Checks if is delete chat photo.
+	 * Gets the {@link #deleteChatPhoto}.
 	 *
-	 * @return true, if is delete chat photo
+	 * @return the {@link #deleteChatPhoto}.
 	 */
 	public boolean isDeleteChatPhoto() {
 		return deleteChatPhoto;
@@ -749,9 +751,9 @@ public class Message implements Serializable {
 	}
 
 	/**
-	 * Checks if is group chat created.
+	 * Gets the {@link #groupChatCreated}.
 	 *
-	 * @return true, if is group chat created
+	 * @return the {@link #groupChatCreated}.
 	 */
 	public boolean isGroupChatCreated() {
 		return groupChatCreated;
@@ -767,9 +769,9 @@ public class Message implements Serializable {
 	}
 
 	/**
-	 * Checks if is supergroup chat created.
+	 * Gets the {@link #supergroupChatCreated}.
 	 *
-	 * @return true, if is supergroup chat created
+	 * @return the {@link #supergroupChatCreated}.
 	 */
 	public boolean isSupergroupChatCreated() {
 		return supergroupChatCreated;
@@ -785,9 +787,9 @@ public class Message implements Serializable {
 	}
 
 	/**
-	 * Checks if is channel chat created.
+	 * Gets the {@link #channelChatCreated}.
 	 *
-	 * @return true, if is channel chat created
+	 * @return the {@link #channelChatCreated}.
 	 */
 	public boolean isChannelChatCreated() {
 		return channelChatCreated;

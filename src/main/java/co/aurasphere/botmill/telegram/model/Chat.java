@@ -168,9 +168,9 @@ public class Chat implements Serializable {
 	}
 
 	/**
-	 * Checks if is all members are administrators.
+	 * Gets the {@link #allMembersAreAdministrators}.
 	 *
-	 * @return true, if is all members are administrators
+	 * @return the {@link #allMembersAreAdministrators}.
 	 */
 	public boolean isAllMembersAreAdministrators() {
 		return allMembersAreAdministrators;
