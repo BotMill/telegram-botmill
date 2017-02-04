@@ -10,7 +10,7 @@ import co.aurasphere.botmill.telegram.model.User;
  * query, your bot could return some default or trending results.
  * 
  * @author Donato Rimenti
- * @date Dec 25, 2016
+ * 
  */
 public class InlineQuery implements Serializable {
 

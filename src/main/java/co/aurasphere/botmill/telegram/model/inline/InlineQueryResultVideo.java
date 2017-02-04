@@ -12,7 +12,7 @@ import com.google.gson.annotations.SerializedName;
  * with the specified content instead of the video.
  * 
  * @author Donato Rimenti
- * @date Dec 26, 2016
+ * 
  */
 public class InlineQueryResultVideo extends
 		InlineQueryInputMessageContentResult {

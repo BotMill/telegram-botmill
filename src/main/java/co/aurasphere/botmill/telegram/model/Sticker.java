@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName;
  * This object represents a sticker.
  * 
  * @author Donato Rimenti
- * @date Dec 25, 2016
+ * 
  */
 public class Sticker implements Serializable {
 

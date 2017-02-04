@@ -9,7 +9,7 @@ import com.google.gson.annotations.SerializedName;
  * users without usernames).
  * 
  * @author Donato Rimenti
- * @date Dec 25, 2016
+ * 
  */
 public enum MentionType {
 	

@@ -8,7 +8,7 @@ import co.aurasphere.botmill.telegram.model.inline.input.InlineQueryInputMessage
  * Represents a link to something stored on the Telegram servers.
  * 
  * @author Donato Rimenti
- * @date Dec 26, 2016
+ * 
  */
 public class InlineQueryResultCached extends
 		InlineQueryInputMessageContentResult {

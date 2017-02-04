@@ -8,7 +8,7 @@ package co.aurasphere.botmill.telegram.model.inline.input;
  * Older clients will ignore them.
  * 
  * @author Donato Rimenti
- * @date Dec 27, 2016
+ * 
  */
 public class InputLocationMessageContent extends InputMessageContent {
 

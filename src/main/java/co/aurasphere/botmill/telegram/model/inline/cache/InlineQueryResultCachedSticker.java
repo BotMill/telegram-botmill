@@ -14,7 +14,7 @@ import co.aurasphere.botmill.telegram.model.inline.InlineQueryResultType;
  * Older clients will ignore them.
  * 
  * @author Donato Rimenti
- * @date Dec 27, 2016
+ * 
  */
 public class InlineQueryResultCachedSticker extends InlineQueryResultCached {
 

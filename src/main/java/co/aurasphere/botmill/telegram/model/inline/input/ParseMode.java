@@ -13,7 +13,7 @@ import com.google.gson.annotations.SerializedName;
  *      options</a>.
  * 
  * @author Donato Rimenti
- * @date Dec 27, 2016
+ * 
  */
 public enum ParseMode {
 	

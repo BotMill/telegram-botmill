@@ -8,7 +8,7 @@ import co.aurasphere.botmill.telegram.model.User;
  * This object represents one row of the high scores table for a game.
  * 
  * @author Donato Rimenti
- * @date Dec 25, 2016
+ * 
  */
 public class GameHighScore implements Serializable {
 

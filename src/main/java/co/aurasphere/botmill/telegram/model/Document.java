@@ -9,7 +9,7 @@ import com.google.gson.annotations.SerializedName;
  * and audio files).
  * 
  * @author Donato Rimenti
- * @date Dec 25, 2016
+ * 
  */
 public class Document implements Serializable {
 

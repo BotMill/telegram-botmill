@@ -9,7 +9,7 @@ import com.google.gson.annotations.SerializedName;
  * Represents a link to an article or web page.
  * 
  * @author Donato Rimenti
- * @date Dec 25, 2016
+ * 
  */
 public class InlineQueryResultArticle extends
 		InlineQueryInputMessageContentResult {

@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName;
  * This object represents a Telegram user or bot.
  * 
  * @author Donato Rimenti
- * @date Dec 25, 2016
+ * 
  */
 public class User implements Serializable {
 	

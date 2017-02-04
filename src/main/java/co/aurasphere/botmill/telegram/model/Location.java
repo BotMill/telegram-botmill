@@ -6,7 +6,7 @@ import java.io.Serializable;
  * This object represents a point on the map.
  * 
  * @author Donato Rimenti
- * @date Dec 25, 2016
+ * 
  */
 public class Location implements Serializable {
 

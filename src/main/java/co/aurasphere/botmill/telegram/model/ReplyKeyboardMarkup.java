@@ -11,7 +11,7 @@ import com.google.gson.annotations.SerializedName;
  *      with details and examples</a>.
  * 
  * @author Donato Rimenti
- * @date Dec 25, 2016
+ * 
  */
 public class ReplyKeyboardMarkup implements Serializable {
 

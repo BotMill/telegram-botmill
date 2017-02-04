@@ -7,7 +7,7 @@ import java.io.Serializable;
  * inline query.
  * 
  * @author Donato Rimenti
- * @date Dec 25, 2016
+ * 
  */
 public abstract class InputMessageContent implements Serializable {
 

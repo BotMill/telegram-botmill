@@ -11,7 +11,7 @@ import com.google.gson.annotations.SerializedName;
  * one of the optional fields.
  * 
  * @author Donato Rimenti
- * @date Dec 25, 2016
+ * 
  */
 public class InlineKeyboardButton implements Serializable {
 

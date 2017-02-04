@@ -23,7 +23,7 @@ import com.google.gson.annotations.SerializedName;
  * @see <a href="https://core.telegram.org/bots/inline">Inline Mode</a>.
  * 
  * @author Donato Rimenti
- * @date Dec 25, 2016
+ * 
  */
 public class CallbackQuery implements Serializable {
 

@@ -10,7 +10,7 @@ import com.google.gson.annotations.SerializedName;
  * among them.
  * 
  * @author Donato Rimenti
- * @date Dec 26, 2016
+ * 
  */
 public class InlineQueryResultGame extends InlineQueryResult {
 

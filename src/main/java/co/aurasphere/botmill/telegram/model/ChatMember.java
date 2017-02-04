@@ -6,7 +6,7 @@ import java.io.Serializable;
  * This object contains information about one member of the chat.
  * 
  * @author Donato Rimenti
- * @date Dec 25, 2016
+ * 
  */
 public class ChatMember implements Serializable {
 

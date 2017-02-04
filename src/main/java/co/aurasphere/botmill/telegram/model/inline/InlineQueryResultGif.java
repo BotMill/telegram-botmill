@@ -12,7 +12,7 @@ import com.google.gson.annotations.SerializedName;
  * the animation.
  * 
  * @author Donato Rimenti
- * @date Dec 26, 2016
+ * 
  */
 public class InlineQueryResultGif extends InlineQueryInputMessageContentResult {
 

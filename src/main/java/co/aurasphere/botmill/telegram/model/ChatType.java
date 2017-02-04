@@ -9,7 +9,7 @@ import com.google.gson.annotations.SerializedName;
  * Type of chat, can be either “private”, “group”, “supergroup” or “channel”.
  * 
  * @author Donato Rimenti
- * @date Dec 25, 2016
+ * 
  */
 public enum ChatType {
 

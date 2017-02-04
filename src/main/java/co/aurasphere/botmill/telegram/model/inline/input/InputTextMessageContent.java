@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName;
  * inline query.
  * 
  * @author Donato Rimenti
- * @date Dec 27, 2016
+ * 
  */
 public class InputTextMessageContent extends InputMessageContent {
 

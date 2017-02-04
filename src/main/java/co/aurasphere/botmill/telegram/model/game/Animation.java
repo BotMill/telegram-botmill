@@ -14,7 +14,7 @@ import com.google.gson.annotations.SerializedName;
  * @see <a href="https://core.telegram.org/bots/api#games">Telegram Games</a>.
  * 
  * @author Donato Rimenti
- * @date Dec 25, 2016
+ * 
  */
 public class Animation implements Serializable {
 

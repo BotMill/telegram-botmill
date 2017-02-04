@@ -6,7 +6,7 @@ import co.aurasphere.botmill.telegram.model.inline.input.InlineQueryInputMessage
  * Type of the {@link InlineQueryInputMessageContentResult}.
  * 
  * @author Donato Rimenti
- * @date Dec 25, 2016
+ * 
  */
 public enum InlineQueryResultType {
 	

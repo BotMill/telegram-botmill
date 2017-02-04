@@ -12,7 +12,7 @@ import com.google.gson.annotations.SerializedName;
  * size to download is 20 MB.
  * 
  * @author Donato Rimenti
- * @date Dec 25, 2016
+ * 
  */
 public class File implements Serializable {
 

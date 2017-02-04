@@ -12,7 +12,7 @@ import com.google.gson.annotations.SerializedName;
  * the user presses a button (see {@link ReplyKeyboardMarkup}).
  * 
  * @author Donato Rimenti
- * @date Dec 25, 2016
+ * 
  */
 public class ReplyKeyboardRemove implements Serializable {
 

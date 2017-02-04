@@ -10,7 +10,7 @@ import com.google.gson.annotations.SerializedName;
  * Older clients will ignore them.
  * 
  * @author Donato Rimenti
- * @date Dec 27, 2016
+ * 
  */
 public class InputVenueMessageContent extends InputLocationMessageContent {
 

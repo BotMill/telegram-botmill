@@ -12,7 +12,7 @@ import co.aurasphere.botmill.telegram.model.inline.InlineQueryResultType;
  * the animation.
  * 
  * @author Donato Rimenti
- * @date Dec 27, 2016
+ * 
  */
 public class InlineQueryResultCachedMpeg4Gif extends InlineQueryResultCached {
 

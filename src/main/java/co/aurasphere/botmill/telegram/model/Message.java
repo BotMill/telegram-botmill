@@ -15,7 +15,7 @@ import com.google.gson.annotations.SerializedName;
  * This object represents a message.
  * 
  * @author Donato Rimenti
- * @date Dec 25, 2016
+ * 
  */
 public class Message implements Serializable {
 

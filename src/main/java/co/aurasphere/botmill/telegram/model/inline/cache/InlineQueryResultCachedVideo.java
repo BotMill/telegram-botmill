@@ -11,7 +11,7 @@ import co.aurasphere.botmill.telegram.model.inline.InlineQueryResultType;
  * specified content instead of the video.
  * 
  * @author Donato Rimenti
- * @date Dec 27, 2016
+ * 
  */
 public class InlineQueryResultCachedVideo extends InlineQueryResultCached {
 

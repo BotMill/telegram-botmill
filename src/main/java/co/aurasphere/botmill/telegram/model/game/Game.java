@@ -13,7 +13,7 @@ import com.google.gson.annotations.SerializedName;
  * short names will act as unique identifiers.
  * 
  * @author Donato Rimenti
- * @date Dec 25, 2016
+ * 
  */
 public class Game implements Serializable {
 

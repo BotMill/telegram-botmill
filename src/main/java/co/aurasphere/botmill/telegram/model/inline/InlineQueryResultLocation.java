@@ -14,7 +14,7 @@ import com.google.gson.annotations.SerializedName;
  * Older clients will ignore them.
  * 
  * @author Donato Rimenti
- * @date Dec 26, 2016
+ * 
  */
 public class InlineQueryResultLocation extends
 		InlineQueryInputMessageContentResult {

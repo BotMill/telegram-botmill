@@ -12,7 +12,7 @@ import com.google.gson.annotations.SerializedName;
  * message with the specified content instead of the animation.
  * 
  * @author Donato Rimenti
- * @date Dec 26, 2016
+ * 
  */
 public class InlineQueryResultMpeg4Gif extends
 		InlineQueryInputMessageContentResult {

@@ -10,7 +10,7 @@ import com.google.gson.annotations.SerializedName;
  * Contains information about the current status of a webhook.
  * 
  * @author Donato Rimenti
- * @date Dec 25, 2016
+ * 
  */
 public class WebhookInfo implements Serializable {
 

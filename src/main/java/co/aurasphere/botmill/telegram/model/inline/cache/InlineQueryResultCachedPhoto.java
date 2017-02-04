@@ -14,7 +14,7 @@ import co.aurasphere.botmill.telegram.model.inline.InlineQueryResultType;
  * instead of the photo.
  * 
  * @author Donato Rimenti
- * @date Dec 26, 2016
+ * 
  */
 public class InlineQueryResultCachedPhoto extends InlineQueryResultCached {
 

@@ -7,7 +7,7 @@ import java.io.Serializable;
  * game.
  * 
  * @author Donato Rimenti
- * @date Dec 25, 2016
+ * 
  */
 public class CallbackGame implements Serializable {
 

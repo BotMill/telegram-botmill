@@ -12,7 +12,7 @@ import com.google.gson.annotations.SerializedName;
  * clients.
  * 
  * @author Donato Rimenti
- * @date Dec 25, 2016
+ * 
  */
 public class Audio implements Serializable {
 

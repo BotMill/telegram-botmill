@@ -11,7 +11,7 @@ import co.aurasphere.botmill.telegram.model.inline.InlineQueryResultType;
  * with specified content instead of the animation.
  * 
  * @author Donato Rimenti
- * @date Dec 27, 2016
+ * 
  */
 public class InlineQueryResultCachedGif extends InlineQueryResultCached {
 

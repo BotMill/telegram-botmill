@@ -7,7 +7,7 @@ import java.io.Serializable;
  * hashtags, usernames, URLs, etc.
  * 
  * @author Donato Rimenti
- * @date Dec 25, 2016
+ * 
  */
 public class MessageEntity implements Serializable {
 

@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName;
  * This object represents a venue.
  * 
  * @author Donato Rimenti
- * @date Dec 25, 2016
+ * 
  */
 public class Venue implements Serializable {
 

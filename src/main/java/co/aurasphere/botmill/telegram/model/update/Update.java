@@ -14,7 +14,7 @@ import com.google.gson.annotations.SerializedName;
  * parameters can be present in any given update.
  * 
  * @author Donato Rimenti
- * @date Dec 25, 2016
+ * 
  */
 public class Update implements Serializable {
 

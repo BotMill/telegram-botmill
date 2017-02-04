@@ -14,7 +14,7 @@ import com.google.gson.annotations.SerializedName;
  * send a message with the specified content instead of the photo.
  * 
  * @author Donato Rimenti
- * @date Dec 25, 2016
+ * 
  */
 public class InlineQueryResultPhoto extends
 		InlineQueryInputMessageContentResult {

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * This object represents one result of an inline query.
  * 
  * @author Donato Rimenti
- * @date Dec 26, 2016
+ * 
  */
 public class InlineQueryResult implements Serializable {
 

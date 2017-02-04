@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName;
  * “left” or “kicked”.
  * 
  * @author Donato Rimenti
- * @date Dec 25, 2016
+ * 
  */
 public enum ChatMemberStatus {
 	

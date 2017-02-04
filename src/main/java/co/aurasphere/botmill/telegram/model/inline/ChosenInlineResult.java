@@ -14,7 +14,7 @@ import com.google.gson.annotations.SerializedName;
  * to their chat partner.
  * 
  * @author Donato Rimenti
- * @date Dec 27, 2016
+ * 
  */
 public class ChosenInlineResult implements Serializable {
 

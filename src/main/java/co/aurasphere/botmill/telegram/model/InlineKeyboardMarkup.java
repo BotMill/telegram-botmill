@@ -17,7 +17,7 @@ import com.google.gson.annotations.SerializedName;
  *      Keyboard</a>.
  * 
  * @author Donato Rimenti
- * @date Dec 25, 2016
+ * 
  */
 public class InlineKeyboardMarkup implements Serializable {
 

@@ -10,7 +10,7 @@ import com.google.gson.annotations.SerializedName;
  * button. Optional fields are mutually exclusive.
  * 
  * @author Donato Rimenti
- * @date Dec 25, 2016
+ * 
  */
 public class KeyboardButton implements Serializable {
 

@@ -9,7 +9,7 @@ import com.google.gson.annotations.SerializedName;
  * This object represents one size of a photo or a file / sticker thumbnail.
  * 
  * @author Donato Rimenti
- * @date Dec 25, 2016
+ * 
  */
 public class PhotoSize implements Serializable {
 

@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName;
  * Contains information about why a request was unsuccessfull.
  * 
  * @author Donato Rimenti
- * @date Dec 25, 2016
+ * 
  */
 public class ResponseParameters implements Serializable {
 
