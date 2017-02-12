@@ -36,13 +36,12 @@ public class UpdateService {
 	
 	// TODO:
 	public List<Update> getUpdates() {
-
+		return null;
 	}
 
 	public List<Update> getUpdates(GetUpdatesOptions options) {
-
+		return null;
 	}
 	
 	public void setWebhook(){}
-	
 }
