@@ -25,6 +25,10 @@ package co.aurasphere.botmill.telegram.model;
 
 import java.io.Serializable;
 
+import javax.validation.Valid;
+
+import org.hibernate.validator.constraints.NotEmpty;
+
 import com.google.gson.annotations.SerializedName;
 
 /**
@@ -36,7 +40,7 @@ import com.google.gson.annotations.SerializedName;
  * @author Donato Rimenti
  * 
  */
-public class ReplyKeyboardMarkup implements Serializable {
+public class ReplyKeyboardMarkup implements ReplyMarkupOption, Serializable {
 
 	/**
 	 * The serial version UID.
@@ -47,6 +51,8 @@ public class ReplyKeyboardMarkup implements Serializable {
 	 * Array of button rows, each represented by an Array of KeyboardButton
 	 * objects.
 	 */
+	@Valid
+	@NotEmpty
 	private KeyboardButton[][] keyboard;
 
 	/**

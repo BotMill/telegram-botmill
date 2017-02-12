@@ -25,6 +25,10 @@ package co.aurasphere.botmill.telegram.model;
 
 import java.io.Serializable;
 
+import javax.validation.Valid;
+
+import org.hibernate.validator.constraints.NotBlank;
+
 import com.google.gson.annotations.SerializedName;
 
 /**
@@ -44,12 +48,14 @@ public class Document implements Serializable {
 	/**
 	 * Unique file identifier.
 	 */
+	@NotBlank
 	@SerializedName("file_id")
 	private String fileId;
 
 	/**
 	 * Optional. Document thumbnail as defined by sender.
 	 */
+	@Valid
 	private PhotoSize thumb;
 
 	/**

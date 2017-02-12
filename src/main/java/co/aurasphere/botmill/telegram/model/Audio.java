@@ -5,6 +5,10 @@ package co.aurasphere.botmill.telegram.model;
 
 import java.io.Serializable;
 
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.NotBlank;
+
 import com.google.gson.annotations.SerializedName;
 
 /**
@@ -24,12 +28,14 @@ public class Audio implements Serializable {
 	/**
 	 * Unique identifier for this file.
 	 */
+	@NotBlank
 	@SerializedName("file_id")
 	private String fileId;
 
 	/**
 	 * Duration of the audio in seconds as defined by sender.
 	 */
+	@NotNull
 	private int duration;
 
 	/**

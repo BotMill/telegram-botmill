@@ -25,6 +25,9 @@ package co.aurasphere.botmill.telegram.model;
 
 import java.io.Serializable;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+
 /**
  * This object contains information about one member of the chat.
  * 
@@ -41,12 +44,15 @@ public class ChatMember implements Serializable {
 	/**
 	 * Information about the user.
 	 */
+	@Valid
+	@NotNull
 	private User user;
 
 	/**
 	 * The member's status in the chat. Can be “creator”, “administrator”,
 	 * “member”, “left” or “kicked”.
 	 */
+	@NotNull
 	private ChatMemberStatus status;
 
 	/**

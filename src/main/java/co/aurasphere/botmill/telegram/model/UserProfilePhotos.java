@@ -26,6 +26,11 @@ package co.aurasphere.botmill.telegram.model;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.NotEmpty;
+
 import com.google.gson.annotations.SerializedName;
 
 /**
@@ -44,12 +49,15 @@ public class UserProfilePhotos implements Serializable {
 	/**
 	 * Total number of profile pictures the target user has.
 	 */
+	@NotNull
 	@SerializedName("total_count")
 	private int totalCount;
 
 	/**
 	 * Requested profile pictures (in up to 4 sizes each).
 	 */
+	@Valid
+	@NotEmpty
 	private List<PhotoSize> photos;
 
 	/**

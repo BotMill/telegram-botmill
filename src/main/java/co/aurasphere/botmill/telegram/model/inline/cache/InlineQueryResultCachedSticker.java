@@ -46,6 +46,7 @@ public class InlineQueryResultCachedSticker extends InlineQueryResultCached {
 	 */
 	private static final long serialVersionUID = 1L;
 
+	// TODO: javadoc
 	@SerializedName("sticker_file_id")
 	private String stickerFileId;
 

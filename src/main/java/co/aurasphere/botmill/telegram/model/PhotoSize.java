@@ -25,6 +25,10 @@ package co.aurasphere.botmill.telegram.model;
 
 import java.io.Serializable;
 
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.NotBlank;
+
 import com.google.gson.annotations.SerializedName;
 
 /**
@@ -44,17 +48,20 @@ public class PhotoSize implements Serializable {
 	/**
 	 * Unique identifier for this file.
 	 */
+	@NotBlank
 	@SerializedName("file_id")
 	private String fileId;
 	
 	/**
 	 * Photo width.
 	 */
+	@NotNull
 	private int width;
 	
 	/**
 	 * Photo height.
 	 */
+	@NotNull
 	private int height;
 	
 	/**

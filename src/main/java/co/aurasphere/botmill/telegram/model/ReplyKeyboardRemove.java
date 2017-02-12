@@ -25,6 +25,8 @@ package co.aurasphere.botmill.telegram.model;
 
 import java.io.Serializable;
 
+import javax.validation.constraints.NotNull;
+
 import com.google.gson.annotations.SerializedName;
 
 /**
@@ -37,7 +39,7 @@ import com.google.gson.annotations.SerializedName;
  * @author Donato Rimenti
  * 
  */
-public class ReplyKeyboardRemove implements Serializable {
+public class ReplyKeyboardRemove implements ReplyMarkupOption, Serializable {
 
 	/**
 	 * The serial version UID.
@@ -49,6 +51,7 @@ public class ReplyKeyboardRemove implements Serializable {
 	 * summon this keyboard; if you want to hide the keyboard from sight but
 	 * keep it accessible, use one_time_keyboard in {@link ReplyKeyboardMarkup}).
 	 */
+	@NotNull
 	@SerializedName("remove_keyboard")
 	private boolean removeKeyboard;
 

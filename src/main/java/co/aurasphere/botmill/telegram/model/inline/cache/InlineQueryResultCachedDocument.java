@@ -42,7 +42,7 @@ import co.aurasphere.botmill.telegram.model.inline.InlineQueryResultType;
 public class InlineQueryResultCachedDocument extends InlineQueryResultCached {
 
 	/**
-	 * 
+	 * The serial version UID.
 	 */
 	private static final long serialVersionUID = 1L;
 

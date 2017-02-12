@@ -25,6 +25,8 @@ package co.aurasphere.botmill.telegram.model;
 
 import java.io.Serializable;
 
+import javax.validation.constraints.NotNull;
+
 import com.google.gson.annotations.SerializedName;
 
 /**
@@ -53,7 +55,7 @@ import com.google.gson.annotations.SerializedName;
  * @author Donato Rimenti
  * 
  */
-public class ForceReply implements Serializable {
+public class ForceReply implements ReplyMarkupOption, Serializable {
 
 	/**
 	 * The serial version UID.
@@ -64,6 +66,7 @@ public class ForceReply implements Serializable {
 	 * Shows reply interface to the user, as if they manually selected the bot‘s
 	 * message and tapped ’Reply'.
 	 */
+	@NotNull
 	@SerializedName("force_reply")
 	private boolean forceReply;
 

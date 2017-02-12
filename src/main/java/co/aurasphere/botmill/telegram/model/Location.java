@@ -25,6 +25,8 @@ package co.aurasphere.botmill.telegram.model;
 
 import java.io.Serializable;
 
+import javax.validation.constraints.NotNull;
+
 /**
  * This object represents a point on the map.
  * 
@@ -41,11 +43,13 @@ public class Location implements Serializable {
 	/**
 	 * Longitude as defined by sender.
 	 */
+	@NotNull
 	private double longitude;
 
 	/**
 	 * Latitude as defined by sender.
 	 */
+	@NotNull
 	private double latitude;
 
 	/**

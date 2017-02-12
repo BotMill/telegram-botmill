@@ -25,6 +25,8 @@ package co.aurasphere.botmill.telegram.model;
 
 import java.io.Serializable;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 import com.google.gson.annotations.SerializedName;
 
 /**
@@ -46,6 +48,7 @@ public class KeyboardButton implements Serializable {
 	 * Text of the button. If none of the optional fields are used, it will be
 	 * sent to the bot as a message when the button is pressed.
 	 */
+	@NotBlank
 	private String text;
 
 	/**

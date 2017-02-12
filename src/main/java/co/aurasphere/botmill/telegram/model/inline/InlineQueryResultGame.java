@@ -42,6 +42,7 @@ public class InlineQueryResultGame extends InlineQueryResult {
 	 */
 	private static final long serialVersionUID = 1L;
 
+	// TODO: javadoc
 	@SerializedName("game_short_name")
 	private String gameShortName;
 

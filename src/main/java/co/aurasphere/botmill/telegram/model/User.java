@@ -25,6 +25,8 @@ package co.aurasphere.botmill.telegram.model;
 
 import java.io.Serializable;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 import com.google.gson.annotations.SerializedName;
 
 /**
@@ -43,11 +45,13 @@ public class User implements Serializable {
 	/**
 	 * Unique identifier for this user or bot.
 	 */
+	@NotBlank
 	private String id;
 	
 	/**
 	 * User‘s or bot’s first name.
 	 */
+	@NotBlank
 	@SerializedName("first_name")
 	private String firstName;
 	

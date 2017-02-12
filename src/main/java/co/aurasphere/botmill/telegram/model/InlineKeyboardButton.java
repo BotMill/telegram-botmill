@@ -25,6 +25,10 @@ package co.aurasphere.botmill.telegram.model;
 
 import java.io.Serializable;
 
+import javax.validation.Valid;
+
+import org.hibernate.validator.constraints.NotBlank;
+
 import co.aurasphere.botmill.telegram.model.game.CallbackGame;
 
 import com.google.gson.annotations.SerializedName;
@@ -46,6 +50,7 @@ public class InlineKeyboardButton implements Serializable {
 	/**
 	 * Label text on the button.
 	 */
+	@NotBlank
 	private String text;
 
 	/**
@@ -95,6 +100,7 @@ public class InlineKeyboardButton implements Serializable {
 	 * NOTE: This type of button must always be the first button in the first
 	 * row.
 	 */
+	@Valid
 	@SerializedName("callback_game")
 	private CallbackGame callbackGame;
 

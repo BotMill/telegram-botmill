@@ -25,6 +25,11 @@ package co.aurasphere.botmill.telegram.model;
 
 import java.io.Serializable;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.NotBlank;
+
 import com.google.gson.annotations.SerializedName;
 
 /**
@@ -43,16 +48,20 @@ public class Venue implements Serializable {
 	/**
 	 * Venue location.
 	 */
+	@Valid
+	@NotNull
 	private Location location;
 
 	/**
 	 * Name of the venue.
 	 */
+	@NotBlank
 	private String title;
 
 	/**
 	 * Address of the venue.
 	 */
+	@NotBlank
 	private String address;
 
 	/**

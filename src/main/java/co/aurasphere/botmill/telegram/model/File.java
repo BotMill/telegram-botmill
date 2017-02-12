@@ -25,6 +25,8 @@ package co.aurasphere.botmill.telegram.model;
 
 import java.io.Serializable;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 import com.google.gson.annotations.SerializedName;
 
 /**
@@ -47,6 +49,7 @@ public class File implements Serializable {
 	/**
 	 * Unique identifier for this file.
 	 */
+	@NotBlank
 	@SerializedName("file_id")
 	private String fileId;
 

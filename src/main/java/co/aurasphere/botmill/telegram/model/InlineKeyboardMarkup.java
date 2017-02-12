@@ -26,6 +26,10 @@ package co.aurasphere.botmill.telegram.model;
 import java.io.Serializable;
 import java.util.Arrays;
 
+import javax.validation.Valid;
+
+import org.hibernate.validator.constraints.NotEmpty;
+
 import com.google.gson.annotations.SerializedName;
 
 /**
@@ -42,7 +46,7 @@ import com.google.gson.annotations.SerializedName;
  * @author Donato Rimenti
  * 
  */
-public class InlineKeyboardMarkup implements Serializable {
+public class InlineKeyboardMarkup implements ReplyMarkupOption, Serializable {
 
 	/**
 	 * The serial version UID.
@@ -53,6 +57,8 @@ public class InlineKeyboardMarkup implements Serializable {
 	 * Array of button rows, each represented by an Array of
 	 * InlineKeyboardButton objects.
 	 */
+	@Valid
+	@NotEmpty
 	@SerializedName("inline_keyboard")
 	private InlineKeyboardButton[][] inlineKeyboard;
 

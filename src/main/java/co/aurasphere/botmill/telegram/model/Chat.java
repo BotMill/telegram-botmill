@@ -33,8 +33,8 @@ import com.google.gson.annotations.SerializedName;
  * @author Donato Rimenti
  * 
  */
-public class Chat implements Serializable {
 
+public class Chat implements Serializable {
 	/**
 	 * The serial version UID.
 	 */

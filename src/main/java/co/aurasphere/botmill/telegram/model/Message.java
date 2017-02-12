@@ -7,6 +7,11 @@ import java.io.Serializable;
 import java.util.Calendar;
 import java.util.List;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.NotBlank;
+
 import co.aurasphere.botmill.telegram.model.game.Game;
 
 import com.google.gson.annotations.SerializedName;
@@ -27,28 +32,34 @@ public class Message implements Serializable {
 	/**
 	 * Unique message identifier inside this chat.
 	 */
+	@NotBlank
 	@SerializedName("message_id")
 	private String messageId;
 
 	/**
 	 * Optional. Sender, can be empty for messages sent to channels.
 	 */
+	@Valid
 	private User from;
 
 	/**
 	 * Date the message was sent in Unix time.
 	 */
 	// TODO: Check deserialization from integer (use facebot deserializer).
+	@NotNull
 	private Calendar date;
 
 	/**
 	 * Conversation the message belongs to.
 	 */
+	@Valid
+	@NotBlank
 	private Chat chat;
 
 	/**
 	 * Optional. For forwarded messages, sender of the original message.
 	 */
+	@Valid
 	@SerializedName("forward_from")
 	private User forwardFrom;
 
@@ -56,6 +67,7 @@ public class Message implements Serializable {
 	 * Optional. For messages forwarded from a channel, information about the
 	 * original channel.
 	 */
+	@Valid
 	@SerializedName("forward_from_chat")
 	private Chat forwardFromChat;
 
@@ -79,6 +91,7 @@ public class Message implements Serializable {
 	 * in this field will not contain further reply_to_message fields even if it
 	 * itself is a reply.
 	 */
+	@Valid
 	@SerializedName("reply_to_message")
 	private Message replyToMessage;
 
@@ -99,16 +112,19 @@ public class Message implements Serializable {
 	 * Optional. For text messages, special entities like usernames, URLs, bot
 	 * commands, etc. that appear in the text.
 	 */
+	@Valid
 	private List<MessageEntity> entities;
 
 	/**
 	 * Optional. Message is an audio file, information about the file.
 	 */
+	@Valid
 	private Audio audio;
 
 	/**
 	 * Optional. Message is a general file, information about the file.
 	 */
+	@Valid
 	private Document document;
 
 	/**
@@ -117,26 +133,31 @@ public class Message implements Serializable {
 	 * @see <a href="https://core.telegram.org/bots/api#games">More about
 	 *      games</a>
 	 */
+	@Valid
 	private Game game;
 
 	/**
 	 * Optional. Message is a photo, available sizes of the photo.
 	 */
+	@Valid
 	private List<PhotoSize> photo;
 
 	/**
 	 * Optional. Message is a sticker, information about the sticker.
 	 */
+	@Valid
 	private Sticker sticker;
 
 	/**
 	 * Optional. Message is a video, information about the video.
 	 */
+	@Valid
 	private Video video;
 
 	/**
 	 * Optional. Message is a voice message, information about the file.
 	 */
+	@Valid
 	private Voice voice;
 
 	/**
@@ -147,22 +168,26 @@ public class Message implements Serializable {
 	/**
 	 * Optional. Message is a shared contact, information about the contact.
 	 */
+	@Valid
 	private Contact contact;
 
 	/**
 	 * Optional. Message is a shared location, information about the location.
 	 */
+	@Valid
 	private Location location;
 
 	/**
 	 * Optional. Message is a venue, information about the venue.
 	 */
+	@Valid
 	private Venue venue;
 
 	/**
 	 * Optional. A new member was added to the group, information about them
 	 * (this member may be the bot itself).
 	 */
+	@Valid
 	@SerializedName("new_chat_member")
 	private User newChatMember;
 
@@ -170,6 +195,7 @@ public class Message implements Serializable {
 	 * Optional. A new member was added to the group, information about them
 	 * (this member may be the bot itself).
 	 */
+	@Valid
 	@SerializedName("left_chat_member")
 	private User leftChatMember;
 
@@ -182,6 +208,7 @@ public class Message implements Serializable {
 	/**
 	 * Optional. A chat photo was change to this value.
 	 */
+	@Valid
 	@SerializedName("new_chat_photo")
 	private List<PhotoSize> newChatPhoto;
 
@@ -243,6 +270,8 @@ public class Message implements Serializable {
 	 * it. But it smaller than 52 bits, so a signed 64 bit integer or
 	 * double-precision float type are safe for storing this identifier.
 	 */
+	// TODO: this javadoc is wrong. fix it
+	@Valid
 	@SerializedName("pinned_message")
 	private Message pinnedMessage;
 

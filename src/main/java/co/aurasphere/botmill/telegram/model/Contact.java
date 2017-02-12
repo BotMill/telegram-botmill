@@ -25,6 +25,8 @@ package co.aurasphere.botmill.telegram.model;
 
 import java.io.Serializable;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 import com.google.gson.annotations.SerializedName;
 
 /**
@@ -43,12 +45,14 @@ public class Contact implements Serializable {
 	/**
 	 * Contact's phone number.
 	 */
+	@NotBlank
 	@SerializedName("phone_number")
 	private String phoneNumber;
 
 	/**
 	 * Contact's phone number.
 	 */
+	@NotBlank
 	@SerializedName("first_name")
 	private String firstName;
 

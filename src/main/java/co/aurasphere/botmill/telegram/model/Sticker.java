@@ -25,6 +25,11 @@ package co.aurasphere.botmill.telegram.model;
 
 import java.io.Serializable;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.NotBlank;
+
 import com.google.gson.annotations.SerializedName;
 
 /**
@@ -43,22 +48,26 @@ public class Sticker implements Serializable {
 	/**
 	 * Unique identifier for this file.
 	 */
+	@NotBlank
 	@SerializedName("file_id")
 	private String fileId;
 	
 	/**
 	 * Sticker width.
 	 */
+	@NotNull
 	private int width;
 	
 	/**
 	 * Sticker height.
 	 */
+	@NotNull
 	private int height;
 	
 	/**
 	 * Optional. Sticker thumbnail in .webp or .jpg format.
 	 */
+	@Valid
 	private PhotoSize thumb;
 	
 	/**

@@ -25,6 +25,9 @@ package co.aurasphere.botmill.telegram.model;
 
 import java.io.Serializable;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+
 /**
  * This object represents one special entity in a text message. For example,
  * hashtags, usernames, URLs, etc.
@@ -45,16 +48,19 @@ public class MessageEntity implements Serializable {
 	 * string), pre (monowidth block), text_link (for clickable text URLs),
 	 * text_mention (for users without usernames).
 	 */
+	@NotNull
 	private MentionType type;
 
 	/**
 	 * Offset in UTF-16 code units to the start of the entity.
 	 */
+	@NotNull
 	private int offset;
 
 	/**
 	 * Length of the entity in UTF-16 code units.
 	 */
+	@NotNull
 	private int length;
 
 	/**
@@ -66,6 +72,7 @@ public class MessageEntity implements Serializable {
 	/**
 	 * Optional. For “text_mention” only, the mentioned user.
 	 */
+	@Valid
 	private User user;
 
 	/**

@@ -25,6 +25,11 @@ package co.aurasphere.botmill.telegram.model;
 
 import java.io.Serializable;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.NotBlank;
+
 import com.google.gson.annotations.SerializedName;
 
 //TODO: link the methods in the javadoc note
@@ -58,11 +63,14 @@ public class CallbackQuery implements Serializable {
 	/**
 	 * Unique identifier for this query.
 	 */
+	@NotBlank
 	private String id;
 
 	/**
 	 * Sender.
 	 */
+	@Valid
+	@NotNull
 	private User from;
 
 	/**
@@ -70,6 +78,7 @@ public class CallbackQuery implements Serializable {
 	 * Note that message content and message date will not be available if the
 	 * message is too old.
 	 */
+	@Valid
 	private Message message;
 
 	/**
