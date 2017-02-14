@@ -40,7 +40,22 @@ public enum TelegramMethod {
 	/**
 	 * The get updates.
 	 */
-	GET_UPDATES("getUpdates");
+	GET_UPDATES("getUpdates"),
+
+	/**
+	 * The set webhook.
+	 */
+	SET_WEBHOOK("setWebhook"),
+	
+	/**
+	 * The delete webhook.
+	 */
+	DELETE_WEBHOOK("deleteWebhook"),
+	
+	/**
+	 * The get webhook info.
+	 */
+	GET_WEBHOOK_INFO("getWebhookInfo");
 
 	/**
 	 * The name of this Telegram method.

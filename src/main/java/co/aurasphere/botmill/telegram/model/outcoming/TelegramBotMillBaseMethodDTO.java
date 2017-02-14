@@ -25,17 +25,16 @@ package co.aurasphere.botmill.telegram.model.outcoming;
 
 import java.io.Serializable;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.google.gson.annotations.SerializedName;
+import co.aurasphere.botmill.telegram.internal.util.network.TelegramMethod;
 
 /**
- * Object that represents a Telegram BotMill's bot response.
+ * Base class for any object used for a request to a Telegram method.
  * 
  * @author Donato Rimenti
  */
-public abstract class TelegramBotMillResponse extends TelegramBotMillBaseMethodDTO implements Serializable {
+public class TelegramBotMillBaseMethodDTO implements Serializable {
 
 	/**
 	 * The serial version UID.
@@ -43,31 +42,35 @@ public abstract class TelegramBotMillResponse extends TelegramBotMillBaseMethodD
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * Unique identifier for the target chat or username of the target channel
-	 * (in the format @channelusername).
+	 * The telegram method.
 	 */
-	@Valid
 	@NotNull
-	@SerializedName("chat_id")
-	protected String chatId;
+	protected transient TelegramMethod telegramMethod;
 
 	/**
-	 * Gets the {@link #chatId}.
-	 *
-	 * @return the {@link #chatId}.
+	 * Instantiates a new TelegramBotMillBaseMethodDTO.
 	 */
-	public String getChatId() {
-		return chatId;
+	public TelegramBotMillBaseMethodDTO() {
+		super();
 	}
 
 	/**
-	 * Sets the {@link #chatId}.
+	 * Gets the {@link #telegramMethod}.
 	 *
-	 * @param chatId
-	 *            the {@link #chatId} to set.
+	 * @return the {@link #telegramMethod}.
 	 */
-	public void setChatId(String chatId) {
-		this.chatId = chatId;
+	public TelegramMethod getTelegramMethod() {
+		return telegramMethod;
+	}
+
+	/**
+	 * Sets the {@link #telegramMethod}.
+	 *
+	 * @param telegramMethod
+	 *            the {@link #telegramMethod} to set.
+	 */
+	public void setTelegramMethod(TelegramMethod telegramMethod) {
+		this.telegramMethod = telegramMethod;
 	}
 
 	/*
@@ -79,7 +82,8 @@ public abstract class TelegramBotMillResponse extends TelegramBotMillBaseMethodD
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((chatId == null) ? 0 : chatId.hashCode());
+		result = prime * result
+				+ ((telegramMethod == null) ? 0 : telegramMethod.hashCode());
 		return result;
 	}
 
@@ -96,11 +100,8 @@ public abstract class TelegramBotMillResponse extends TelegramBotMillBaseMethodD
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		TelegramBotMillResponse other = (TelegramBotMillResponse) obj;
-		if (chatId == null) {
-			if (other.chatId != null)
-				return false;
-		} else if (!chatId.equals(other.chatId))
+		TelegramBotMillBaseMethodDTO other = (TelegramBotMillBaseMethodDTO) obj;
+		if (telegramMethod != other.telegramMethod)
 			return false;
 		return true;
 	}
@@ -112,7 +113,8 @@ public abstract class TelegramBotMillResponse extends TelegramBotMillBaseMethodD
 	 */
 	@Override
 	public String toString() {
-		return "TelegramBotMillResponse [chatId=" + chatId + "]";
+		return "TelegramBotMillBaseMethodDTO [telegramMethod=" + telegramMethod
+				+ "]";
 	}
 
 }

@@ -44,6 +44,7 @@ import org.slf4j.LoggerFactory;
 
 import co.aurasphere.botmill.telegram.TelegramBotMillContext;
 import co.aurasphere.botmill.telegram.internal.util.json.JsonUtils;
+import co.aurasphere.botmill.telegram.model.outcoming.TelegramBotMillBaseMethodDTO;
 import co.aurasphere.botmill.telegram.model.outcoming.TelegramBotMillResponse;
 import co.aurasphere.botmill.telegram.support.TelegramBotMillMonitor;
 
@@ -96,13 +97,10 @@ public class NetworkUtils {
 	 * 
 	 * @param input
 	 *            the data to send.
-	 * @param method
-	 *            the Telegram method to call.
 	 */
-	public static void postJsonMessage(TelegramBotMillResponse input,
-			TelegramMethod method) {
+	public static void postJsonMessage(TelegramBotMillBaseMethodDTO input) {
 		StringEntity stringEntity = toStringEntity(input);
-		postJsonMessage(stringEntity, method);
+		postJsonMessage(stringEntity, input.getTelegramMethod());
 	}
 
 	/**
@@ -147,12 +145,15 @@ public class NetworkUtils {
 		// Logs the raw JSON for debug purposes.
 		String output = getResponseContent(response);
 		logger.debug("HTTP Status Code: {}", statusCode);
-		logger.trace("Raw response: {}", output);
+		logger.debug("Raw response: {}", output);
 
 		// If the status code is > 400 there was an error.
 		if (statusCode >= 400) {
 			logger.error("HTTP connection failed with error code {}.",
 					statusCode);
+			
+			// Tries to parse the object as an Update.
+			
 			// TODO
 			// Sends the callback to the registered network monitors.
 			for (TelegramBotMillMonitor monitor : registeredMonitors) {

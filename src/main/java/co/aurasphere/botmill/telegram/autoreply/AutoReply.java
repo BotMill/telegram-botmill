@@ -49,7 +49,7 @@ public abstract class AutoReply extends TelegramBotMillBean implements Reply {
 		if (response != null) {
 			// If the response is valid, replies to it.
 			if (validate(response)) {
-				NetworkUtils.postJsonMessage(response, response.getTelegramMethod());
+				NetworkUtils.postJsonMessage(response);
 			}
 		}
 	}

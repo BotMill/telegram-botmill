@@ -23,34 +23,54 @@
  */
 package co.aurasphere.botmill.telegram.support.update;
 
-import java.util.List;
+import org.hibernate.validator.constraints.NotEmpty;
 
-import co.aurasphere.botmill.telegram.internal.util.network.NetworkUtils;
-import co.aurasphere.botmill.telegram.model.update.Update;
+import co.aurasphere.botmill.telegram.internal.util.network.TelegramMethod;
+import co.aurasphere.botmill.telegram.model.outcoming.TelegramBotMillBaseMethodDTO;
 
 /**
- * Service class that handles Telegram updates and webhook services.
+ * Options for the {@link UpdateService#setWebhook(SetWebhookOptions)} method.
  * 
  * @author Donato Rimenti
  */
-public class UpdateService {
+public class SetWebhookOptions extends TelegramBotMillBaseMethodDTO {
+
+	/**
+	 * The serial version UID.
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * HTTPS url to send updates to. Use an empty string to remove webhook
+	 * integration.
+	 */
+	@NotEmpty
+	private String url;
 	
-	// TODO:
-	public static List<Update> getUpdates() {
-		return null;
+	/**
+	 * Instantiates a new SetWebhookOptions.
+	 */
+	public SetWebhookOptions(){
+		this.telegramMethod = TelegramMethod.SET_WEBHOOK;
 	}
 
-	public static List<Update> getUpdates(GetUpdatesOptions options) {
-		return null;
+	/**
+	 * Gets the {@link #url}.
+	 *
+	 * @return the {@link #url}.
+	 */
+	public String getUrl() {
+		return url;
 	}
-	
-	public static void setWebhook(String url){
-		SetWebhookOptions options = new SetWebhookOptions();
-		options.setUrl(url);
-		setWebhook(options);
+
+	/**
+	 * Sets the {@link #url}.
+	 *
+	 * @param url
+	 *            the {@link #url} to set.
+	 */
+	public void setUrl(String url) {
+		this.url = url;
 	}
-	
-	public static void setWebhook(SetWebhookOptions options){
-		NetworkUtils.postJsonMessage(options);
-	}
+
 }

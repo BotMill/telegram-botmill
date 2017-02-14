@@ -23,6 +23,7 @@
  */
 package co.aurasphere.botmill.telegram;
 
+import co.aurasphere.botmill.common.BotDefinition;
 import co.aurasphere.botmill.telegram.actionframe.ActionFrame;
 import co.aurasphere.botmill.telegram.autoreply.AutoReply;
 import co.aurasphere.botmill.telegram.event.TelegramBotMillEvent;
@@ -34,7 +35,7 @@ import co.aurasphere.botmill.telegram.event.TelegramBotMillEvent;
  * @author Donato Rimenti
  * 
  */
-public abstract class AbstractTelegramBot implements TelegramBotDefinition {
+public abstract class AbstractTelegramBot implements BotDefinition {
 
 	/**
 	 * The {@link TelegramBot} object handled by this class.
