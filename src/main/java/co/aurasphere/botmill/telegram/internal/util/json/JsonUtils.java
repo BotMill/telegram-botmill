@@ -64,8 +64,8 @@ public class JsonUtils {
 //					new EnumLowercaseSerializer());
 //
 //			// Serializes calendar in format YYYY-MM-DDThh:mm.
-//			builder.registerTypeHierarchyAdapter(Calendar.class,
-//					new CalendarSerializer());
+			builder.registerTypeHierarchyAdapter(Calendar.class,
+					new CalendarFromTimestampJsonDeserializer());
 
 			gson = builder.create();
 		}

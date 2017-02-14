@@ -30,9 +30,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import co.aurasphere.botmill.common.base.BotMillServlet;
+import co.aurasphere.botmill.telegram.internal.util.json.JsonUtils;
 import co.aurasphere.botmill.telegram.model.update.Update;
-
-import com.google.gson.Gson;
 
 /**
  * Main Servlet for Telegram BotMill framework.
@@ -71,7 +70,7 @@ public class TelegramBotMillServlet extends BotMillServlet {
 
 		// Parses the request as a Telegram Update.
 		try {
-			callback = new Gson().fromJson(json, Update.class);
+			callback = JsonUtils.fromJson(json, Update.class);
 		} catch (Exception e) {
 			logger.error("Error during Telegram Update parsing: ", e);
 			return;

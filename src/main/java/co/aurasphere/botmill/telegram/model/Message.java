@@ -231,7 +231,7 @@ public class Message implements Serializable {
 	 * reply_to_message if someone replies to a very first message in a directly
 	 * created supergroup.
 	 */
-	@SerializedName("group_chat_created")
+	@SerializedName("supergroup_chat_created")
 	private boolean supergroupChatCreated;
 
 	/**
