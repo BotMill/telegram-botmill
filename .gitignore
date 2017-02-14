@@ -1,1 +1,6 @@
 *.class
+*.classpath
+*.project
+.settings/*
+*.component
+target/*
