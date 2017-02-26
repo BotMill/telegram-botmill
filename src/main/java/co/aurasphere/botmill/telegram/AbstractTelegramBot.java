@@ -23,13 +23,13 @@
  */
 package co.aurasphere.botmill.telegram;
 
-import co.aurasphere.botmill.common.BotDefinition;
+import co.aurasphere.botmill.core.BotDefinition;
 import co.aurasphere.botmill.telegram.actionframe.ActionFrame;
 import co.aurasphere.botmill.telegram.autoreply.AutoReply;
 import co.aurasphere.botmill.telegram.event.TelegramBotMillEvent;
 
 /**
- * Base {@link TelegramBotDefinition} implementation that takes care of the
+ * Base {@link BotDefinition} implementation that takes care of the
  * {@link TelegramBot} handling.
  * 
  * @author Donato Rimenti

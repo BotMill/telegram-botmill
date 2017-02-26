@@ -26,7 +26,7 @@ package co.aurasphere.botmill.telegram;
 import java.util.ArrayList;
 import java.util.List;
 
-import co.aurasphere.botmill.common.BotMillPolicy;
+import co.aurasphere.botmill.core.BotMillPolicy;
 import co.aurasphere.botmill.telegram.actionframe.ActionFrame;
 import co.aurasphere.botmill.telegram.autoreply.AutoReply;
 import co.aurasphere.botmill.telegram.event.TelegramBotMillEvent;
