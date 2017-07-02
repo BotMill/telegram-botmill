@@ -21,12 +21,11 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package co.aurasphere.botmill.telegram.model.outcoming;
+package co.aurasphere.botmill.telegram.model.outcoming.response;
 
 import org.hibernate.validator.constraints.NotBlank;
 
 import co.aurasphere.botmill.telegram.internal.util.network.TelegramMethod;
-import co.aurasphere.botmill.telegram.model.ReplyMarkupOption;
 import co.aurasphere.botmill.telegram.model.inline.input.ParseMode;
 
 import com.google.gson.annotations.SerializedName;
@@ -37,7 +36,7 @@ import com.google.gson.annotations.SerializedName;
  * @author Donato Rimenti
  * 
  */
-public class TextMessageResponse extends TelegramBotMillResponse {
+public class TextMessageResponse extends TelegramBaseSendDataResponse {
 
 	/**
 	 * The serial version UID.
@@ -64,30 +63,9 @@ public class TextMessageResponse extends TelegramBotMillResponse {
 	private boolean disableWebPagePreview;
 
 	/**
-	 * Sends the message silently. iOS users will not receive a notification,
-	 * Android users will receive a notification with no sound.
-	 */
-	@SerializedName("disable_notification")
-	private boolean disableNotification;
-
-	/**
-	 * If the message is a reply, ID of the original message.
-	 */
-	@SerializedName("reply_to_message_id")
-	private int replyToMessageId;
-
-	/**
-	 * Additional interface options. A JSON-serialized object for an inline
-	 * keyboard, custom reply keyboard, instructions to remove reply keyboard or
-	 * to force a reply from the user.
-	 */
-	@SerializedName("reply_markup")
-	private ReplyMarkupOption replyMarkup;
-	
-	/**
 	 * Instantiates a new TextMessageResponse.
 	 */
-	public TextMessageResponse(){
+	public TextMessageResponse() {
 		this.telegramMethod = TelegramMethod.SEND_MESSAGE;
 	}
 
@@ -148,81 +126,19 @@ public class TextMessageResponse extends TelegramBotMillResponse {
 		this.disableWebPagePreview = disableWebPagePreview;
 	}
 
-	/**
-	 * Gets the {@link #disableNotification}.
-	 *
-	 * @return the {@link #disableNotification}.
-	 */
-	public boolean isDisableNotification() {
-		return disableNotification;
-	}
-
-	/**
-	 * Sets the {@link #disableNotification}.
-	 *
-	 * @param disableNotification
-	 *            the {@link #disableNotification} to set.
-	 */
-	public void setDisableNotification(boolean disableNotification) {
-		this.disableNotification = disableNotification;
-	}
-
-	/**
-	 * Gets the {@link #replyToMessageId}.
-	 *
-	 * @return the {@link #replyToMessageId}.
-	 */
-	public int getReplyToMessageId() {
-		return replyToMessageId;
-	}
-
-	/**
-	 * Sets the {@link #replyToMessageId}.
-	 *
-	 * @param replyToMessageId
-	 *            the {@link #replyToMessageId} to set.
-	 */
-	public void setReplyToMessageId(int replyToMessageId) {
-		this.replyToMessageId = replyToMessageId;
-	}
-
-	/**
-	 * Gets the {@link #replyMarkup}.
-	 *
-	 * @return the {@link #replyMarkup}.
-	 */
-	public ReplyMarkupOption getReplyMarkup() {
-		return replyMarkup;
-	}
-
-	/**
-	 * Sets the {@link #replyMarkup}.
-	 *
-	 * @param replyMarkup
-	 *            the {@link #replyMarkup} to set.
-	 */
-	public void setReplyMarkup(ReplyMarkupOption replyMarkup) {
-		this.replyMarkup = replyMarkup;
-	}
-
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see
-	 * co.aurasphere.botmill.telegram.model.outcoming.TelegramBotMillResponse
-	 * #hashCode()
+	 * @see co.aurasphere.botmill.telegram.model.outcoming.response.
+	 * TelegramBaseSendDataResponse#hashCode()
 	 */
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = super.hashCode();
-		result = prime * result + (disableNotification ? 1231 : 1237);
 		result = prime * result + (disableWebPagePreview ? 1231 : 1237);
 		result = prime * result
 				+ ((parseMode == null) ? 0 : parseMode.hashCode());
-		result = prime * result
-				+ ((replyMarkup == null) ? 0 : replyMarkup.hashCode());
-		result = prime * result + replyToMessageId;
 		result = prime * result + ((text == null) ? 0 : text.hashCode());
 		return result;
 	}
@@ -230,9 +146,8 @@ public class TextMessageResponse extends TelegramBotMillResponse {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see
-	 * co.aurasphere.botmill.telegram.model.outcoming.TelegramBotMillResponse
-	 * #equals(java.lang.Object)
+	 * @see co.aurasphere.botmill.telegram.model.outcoming.response.
+	 * TelegramBaseSendDataResponse#equals(java.lang.Object)
 	 */
 	@Override
 	public boolean equals(Object obj) {
@@ -243,18 +158,9 @@ public class TextMessageResponse extends TelegramBotMillResponse {
 		if (getClass() != obj.getClass())
 			return false;
 		TextMessageResponse other = (TextMessageResponse) obj;
-		if (disableNotification != other.disableNotification)
-			return false;
 		if (disableWebPagePreview != other.disableWebPagePreview)
 			return false;
 		if (parseMode != other.parseMode)
-			return false;
-		if (replyMarkup == null) {
-			if (other.replyMarkup != null)
-				return false;
-		} else if (!replyMarkup.equals(other.replyMarkup))
-			return false;
-		if (replyToMessageId != other.replyToMessageId)
 			return false;
 		if (text == null) {
 			if (other.text != null)
@@ -267,9 +173,8 @@ public class TextMessageResponse extends TelegramBotMillResponse {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see
-	 * co.aurasphere.botmill.telegram.model.outcoming.TelegramBotMillResponse
-	 * #toString()
+	 * @see co.aurasphere.botmill.telegram.model.outcoming.response.
+	 * TelegramBaseSendDataResponse#toString()
 	 */
 	@Override
 	public String toString() {
@@ -277,7 +182,8 @@ public class TextMessageResponse extends TelegramBotMillResponse {
 				+ ", disableWebPagePreview=" + disableWebPagePreview
 				+ ", disableNotification=" + disableNotification
 				+ ", replyToMessageId=" + replyToMessageId + ", replyMarkup="
-				+ replyMarkup + ", chatId=" + chatId + "]";
+				+ replyMarkup + ", chatId=" + chatId + ", telegramMethod="
+				+ telegramMethod + "]";
 	}
 
 }

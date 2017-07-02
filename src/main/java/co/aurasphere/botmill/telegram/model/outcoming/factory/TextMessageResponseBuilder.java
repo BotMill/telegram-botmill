@@ -26,7 +26,7 @@ package co.aurasphere.botmill.telegram.model.outcoming.factory;
 import co.aurasphere.botmill.telegram.model.ReplyMarkupOption;
 import co.aurasphere.botmill.telegram.model.inline.input.ParseMode;
 import co.aurasphere.botmill.telegram.model.outcoming.TelegramBotMillResponse;
-import co.aurasphere.botmill.telegram.model.outcoming.TextMessageResponse;
+import co.aurasphere.botmill.telegram.model.outcoming.response.TextMessageResponse;
 import co.aurasphere.botmill.telegram.model.update.Update;
 
 /**

@@ -219,7 +219,6 @@ public class NetworkUtils {
 	 * @return {@link String}
 	 */
 	public static String get(String url) {
-		System.out.println(url);
 		HttpGet get = new HttpGet(url);
 		return send(get);
 	}
